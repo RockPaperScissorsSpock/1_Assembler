@@ -1,0 +1,109 @@
+
+                   J E S 2  J O B  L O G  --  S Y S T E M  8 5 6 1  --  N O D E  S V S C J E S 2        
+
+ 
+18.26.17 JOB03376 ---- THURSDAY,  22 JUN 2023 ----
+18.26.17 JOB03376  IRR010I  USERID KC03B90  IS ASSIGNED TO THIS JOB.
+18.26.17 JOB03376  ICH70001I KC03B90  LAST ACCESS AT 18:24:02 ON THURSDAY, JUNE 22, 2023
+18.26.17 JOB03376  $HASP373 KC03B90A STARTED - INIT 1    - CLASS A        - SYS 8561
+18.26.17 JOB03376  -                                      -----TIMINGS (MINS.)------                          -----PAGING COUNTS----
+18.26.17 JOB03376  -STEPNAME PROCSTEP    RC   EXCP   CONN       TCB       SRB  CLOCK          SERV  WORKLOAD  PAGE  SWAP   VIO SWAPS
+18.26.17 JOB03376  -JSTEP01              00     21      2       .00       .00     .0             3  BATCH        0     0     0     0
+18.26.17 JOB03376  -KC03B90A ENDED.  NAME-M. Jizan             TOTAL TCB CPU TIME=      .00 TOTAL ELAPSED TIME=    .0
+18.26.17 JOB03376  $HASP395 KC03B90A ENDED - RC=0000
+
+------ JES2 JOB STATISTICS ------
+
+
+  22 JUN 2023 JOB EXECUTION DATE
+
+
+           27 CARDS READ
+
+
+           83 SYSOUT PRINT RECORDS
+
+
+            0 SYSOUT PUNCH RECORDS
+
+
+            9 SYSOUT SPOOL KBYTES
+
+
+         0.00 MINUTES EXECUTION TIME
+       1 //KC03B90A JOB ,'M. Jizan',MSGCLASS=H                                   JOB03376
+       2 //JSTEP01  EXEC PGM=ASSIST                                                      
+       3 //STEPLIB  DD DSN=KC00NIU.ASSIST.LOADLIB,DISP=SHR                               
+       4 //SYSPRINT DD SYSOUT=*                                                          
+       5 //SYSIN    DD *                                                                 
+       6 //                                                                              
+ICH70001I KC03B90  LAST ACCESS AT 18:24:02 ON THURSDAY, JUNE 22, 2023
+IEFA111I KC03B90A IS USING THE FOLLOWING JOB RELATED SETTINGS:
+         SWA=ABOVE,TIOT SIZE=32K,DSENQSHR=DISALLOW,GDGBIAS=JOB
+IEF236I ALLOC. FOR KC03B90A JSTEP01
+IGD103I SMS ALLOCATED TO DDNAME STEPLIB
+IEF237I JES2 ALLOCATED TO SYSPRINT
+IEF237I JES2 ALLOCATED TO SYSIN
+IEF142I KC03B90A JSTEP01 - STEP WAS EXECUTED - COND CODE 0000
+IGD104I KC00NIU.ASSIST.LOADLIB                       RETAINED,  DDNAME=STEPLIB 
+IEF285I   KC03B90.KC03B90A.JOB03376.D0000102.?         SYSOUT        
+IEF285I   KC03B90.KC03B90A.JOB03376.D0000101.?         SYSIN         
+IEF373I STEP/JSTEP01 /START 2023173.1826
+IEF032I STEP/JSTEP01 /STOP  2023173.1826 
+        CPU:     0 HR  00 MIN  00.00 SEC    SRB:     0 HR  00 MIN  00.00 SEC    
+        VIRT:   584K  SYS:   248K  EXT:        0K  SYS:    11260K
+        ATB- REAL:                  1056K  SLOTS:                     0K
+             VIRT- ALLOC:      13M SHRD:       0M
+IEF375I  JOB/KC03B90A/START 2023173.1826
+IEF033I  JOB/KC03B90A/STOP  2023173.1826 
+        CPU:     0 HR  00 MIN  00.00 SEC    SRB:     0 HR  00 MIN  00.00 SEC    
+
+*** ASSIST 4.0/A2-05/15/82  470/V7A/0:OS/VS2  INS=SDFP7/X=BGHO, CHECK/TRC/=1180, OPTS=CDKMPR FROM PENN ST*NIU COMPSCI*LT            
+
+                                                                                                                                    
+
+                                                                                                               PAGE    1            
+
+  LOC  OBJECT CODE    ADDR1 ADDR2  STMT   SOURCE STATEMENT                                                                          
+                                      1 *****************************************************************                           
+                                      2 *                                                               *                           
+                                      3 *  CSCI 360-1              ASSIGNMENT 1            Summer 2023  *                           
+                                      4 *                                                               *                           
+                                      5 *  DEVELOPER NAME: Milad Jizan                                  *                           
+                                      6 *        DUE DATE: 06/23/2023                                   *                           
+                                      7 *                                                               *                           
+                                      8 *****************************************************************                           
+                                      9 *                                                                                           
+000000                               10 MAIN     CSECT                                                                              
+000000                               11          USING MAIN,15     ESTABLISH ADDRESSABILITY ON REG 15                               
+000000 4140 000D            0000D    12          LA    4,13        LOAD 13 INTO REG 4                                               
+000004 4180 0006            00006    13          LA    8,6         LOAD 6 INTO REG 8                                                
+000008 1A48                          14          AR    4,8         ADD REG 8'S CONTENTS TO REG 4'S                                  
+00000A E160 0000 0000 00000          15          XDUMP ,           DUMP CONTENTS OF ALL 16 REGS                                     
+000010 07FE                          16          BCR   B'1111',14  UNCONDITIONAL RETURN TO CALLER (OS)                              
+                                     17 *                                                                                           
+                                     18          LTORG             LITERAL ORGANIZATION                                             
+                                     19 *                                                                                           
+                                     20          END   MAIN                                                                         
+
+***  NO   STATEMENTS FLAGGED -  NO   WARNINGS,  NO   ERRORS                                                                         
+
+*** DYNAMIC CORE AREA USED:  LOW:     584 HIGH:     344 LEAVING:  492640 FREE BYTES. AVERAGE:       44 BYTES/STMT ***               
+
+*** ASSEMBLY TIME =    0.000 SECS,    21000 STATEMENTS/SEC ***                                                                      
+
+*** PROGRAM EXECUTION BEGINNING - ANY OUTPUT BEFORE EXECUTION TIME MESSAGE IS PRODUCED BY USER PROGRAM ***                          
+
+BEGIN XSNAP - CALL     1 AT E0000010 USER REGISTERS                                                                                 
+
+ REGS 0-7      F4F4F4F4    F4F4F4F4    F4F4F4F4    F4F4F4F4    00000013    F4F4F4F4    F4F4F4F4    F4F4F4F4                         
+ REGS 8-15     00000006    F4F4F4F4    F4F4F4F4    F4F4F4F4    F4F4F4F4    00000018    FFFE7960    00000000                         
+
+                                                                                                                                    
+
+*** EXECUTION TIME =    0.000 SECS.         5 INSTRUCTIONS EXECUTED -     5000 INSTRUCTIONS/SEC ***                                 
+
+*** FIRST CARD NOT READ: NO CARDS READ:FILE UNOPENED                                                                                
+
+*** AM004 - NORMAL USER TERMINATION BY RETURN ***                                                                                   
+
